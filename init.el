@@ -50,11 +50,11 @@
 							   (setq isearch-message (concat isearch-message "[ " (car search-ring) " ] "))
 							   (isearch-search-and-update)))
 
-;; backups/autosave
+;; Backups/autosave
 (setq make-backup-files nil) ; stop creating ~ files
 (setq auto-save-default nil) ; stop creating #auto-save# files
 
-;; tab bs (C)
+;; Tab bs (C)
 (setq-default tab-width 4)
 (setq-default standard-indent 4)
 (setq c-basic-offset tab-width)
@@ -66,7 +66,7 @@
             (c-set-offset 'arglist-intro '+)
             (c-set-offset 'arglist-close 0)))
 
-;; line numbers
+;; Display line numbers
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (add-hook 'text-mode-hook 'display-line-numbers-mode)
 
@@ -87,9 +87,10 @@ buffer in current window."
 
 (global-set-key (kbd "C-c l") 'toggle-window-dedicated)
 
-;; Load shit from ~/elisp
+;; Load Elisp files
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/elisp"))
 
+;; Cute splash screen
 (defun always-use-fancy-splash-screens-p () 1)
 (defalias 'use-fancy-splash-screens-p 'always-use-fancy-splash-screens-p)
 (require 'random-splash-image)
@@ -130,10 +131,8 @@ buffer in current window."
 (add-hook 'web-mode-hook 'my-web-mode-hook)
 (add-hook 'web-mode-hook 'emmet-mode)
 
-;; Show line numbers
-(global-visual-line-mode 0)
-
 ;; No word wrap
+(global-visual-line-mode 0)
 (setq-default truncate-lines 1)
 
 ;; JOE-style undo/redo
@@ -210,7 +209,7 @@ With argument ARG, do this that many times."
 ;; Goto line shortcut
 (global-set-key (kbd "C-c g") 'goto-line)
 
-;; Kill line shortcut
+;; Delete line shortcut
 (global-set-key (kbd "C-k") 'delete-current-line)
 
 ;; Fix for stuff like lambdas
