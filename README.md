@@ -14,7 +14,7 @@ I started using Emacs a few years ago after growing frustrated with [JOE](https:
 - [web-mode](https://web-mode.org/) added for better support for HTML, CSS, JS, PHP, etc.
 - [rust-mode](https://github.com/rust-lang/rust-mode) added for Rust support
 - [kotlin-mode](https://github.com/Emacs-Kotlin-Mode-Maintainers/kotlin-mode) added for Kotlin support
-- [glsl-mode](https://github.com/jimhourihan/glsl-mode) added for GLSL support
+- [glsl-mode](https://github.com/jimhourihan/glsl-mode) added for GLSL support (along with some hacks to support [bgfx](https://github.com/bkaradzic/bgfx/)'s shader language)
 - [cmake-mode](https://github.com/Kitware/CMake/blob/master/Auxiliary/cmake-mode.el) added for CMake support
 - [emmet-mode](https://github.com/smihica/emmet-mode) added for quicker HTML editing
 - `perl-mode` replaced with `cperl-mode` + Perl syntax highlighting fixes
