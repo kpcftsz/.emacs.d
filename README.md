@@ -61,14 +61,14 @@ In the future I'd like to introduce some for `tab-line-mode` as well, but in a t
 - To toggle "show all files" in the sidebar: `M-x speedbar-toggle-show-all-files`
 - To enable tabs: `M-x global-tab-line-mode`
 
-## Remote editing on Windows
+### Remote editing on Windows
 
 This section doesn't really have anything to do with my config specifically, but I figure I'd write about it here for other Windows users who don't feel like figuring this out:
 
-[PuTTY](https://the.earth.li/~sgtatham/putty/latest/w64/putty.zip)'s supplemental utilities (Plink, Pageant, and PuTTYgen) can be used to easily and reliably connect to remote hosts in Emacs. Assuming these tools are in your `PATH`, and your SSH keys are activate in Pageant, you can connect to a remote host with the following:
-Open a file (`C-x C-f`) and specify a path like `/plink:user@host:/home/user/whatever` and everything will "just work"; directories appear in the sidebar as you'd expect, and you can do `M-x eshell` to pop open a remote shell. With this method, I can pretty much do all of my work from one Emacs instance. Pretty neat!
+[PuTTY](https://the.earth.li/~sgtatham/putty/latest/w64/putty.zip)'s supplemental utilities (Plink, Pageant, and PuTTYgen) can be used to easily and reliably connect to remote hosts in Emacs. Assuming these tools are in your `PATH`, and your SSH keys are active in Pageant, you can connect to a remote host with the following:
+Open a file (`C-x C-f`) and specify a path like `/plink:user@host:/home/user/foo` and everything will "just work"; directories appear in the sidebar as you'd expect, and you can do `M-x eshell` to hop into a remote shell. With this method, I can pretty much do all of my work from one Emacs instance. Pretty neat!
 
-**Note:** This method is mostly jank-free, however I've noticed if you haven't approved the remote host keys prior to connection, Emacs will hang. If this happens, `C-g` to cancel connecting and manually connect to the host using `plink.exe` (or just `ssh.exe`) via command line, accept the host key when it asks, and try again. Once all the hosts you'll be connecting to are in `known_hosts`, this is no longer an issue. 
+**Note:** While this method is mostly jank-free, I've noticed that if you haven't approved the remote host keys prior to connection, Emacs will hang. If this happens, `C-g` to cancel connecting and manually connect to the host using `plink.exe` (or just `ssh.exe`) via command line, accept the host key when it asks, and try again. Once all the hosts you'll be connecting to are in `known_hosts`, this will no longer be an issue. 
 
 ## Why aren't you using `use-package`?
 
